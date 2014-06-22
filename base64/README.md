@@ -5,7 +5,7 @@ This base64 implemention is borrowed from nginx source code, which are ngx_decod
 Usage
 =====
 1. encode_base64 
-
+```
 	unsigned char *src= "xxxxx";	
 	int src_len = strlen(src);
 	int dst_len = base64_encoded_length(src_len);
@@ -14,9 +14,10 @@ Usage
         dest[dst_len] = '\0';
 	......
 	free(dest);
+```
 
 2. decode_base64
-
+```
 	unsigned char *src = "xxxxxx";
 	int src_len = strlen(src);
 	int dst_len = base64_decoded_length(src_len);
@@ -25,4 +26,5 @@ Usage
         dest[dst_len] = '\0';
 	......
 	free(dest);
+```
 
