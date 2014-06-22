@@ -9,9 +9,9 @@ Usage
 	unsigned char *src= "xxxxx";	
 	int src_len = strlen(src);
 	int dst_len = base64_encoded_length(src_len);
-        unsigned char *dest = (unsigned char *)malloc(dst_len + 1);
-        encode_base64(dest, src, src_len);
-        dest[dst_len] = '\0';
+	unsigned char *dest = (unsigned char *)malloc(dst_len + 1);
+	encode_base64(dest, src, src_len);
+	dest[dst_len] = '\0';
 	......
 	free(dest);
 ```
@@ -21,9 +21,9 @@ Usage
 	unsigned char *src = "xxxxxx";
 	int src_len = strlen(src);
 	int dst_len = base64_decoded_length(src_len);
-        unsigned char *dest = (unsigned char *)malloc(dst_len + 1);
-        decode_base64(dest, &dst_len, src, src_len);
-        dest[dst_len] = '\0';
+	unsigned char *dest = (unsigned char *)malloc(dst_len + 1);
+	decode_base64(dest, &dst_len, src, src_len);
+	dest[dst_len] = '\0';
 	......
 	free(dest);
 ```
