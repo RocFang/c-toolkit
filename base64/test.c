@@ -28,7 +28,7 @@ int main(int argc, char **argv)
     
         dst_len = base64_encoded_length(src_len);        
         unsigned char *dest = (unsigned char *)malloc(dst_len + 1);
-        encode_base64(dest, encode_test_case[i], dst_len);
+        encode_base64(dest, encode_test_case[i], src_len);
         dest[dst_len] = '\0'; 
         printf("%s\n", dest);
         printf("%s\n", "----------------------------------------------------");

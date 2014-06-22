@@ -84,9 +84,9 @@ int decode_base64_internal(unsigned char *dst, unsigned int *dst_len, unsigned c
     d = dst;
 
     while (len > 3) {
-        *d++ = (unsigned char *) (basis[s[0]] << 2 | basis[s[1]] >> 4);
-        *d++ = (unsigned char *) (basis[s[1]] << 4 | basis[s[2]] >> 2);
-        *d++ = (unsigned char *) (basis[s[2]] << 6 | basis[s[3]]);
+        *d++ = (unsigned char)(basis[s[0]] << 2 | basis[s[1]] >> 4);
+        *d++ = (unsigned char)(basis[s[1]] << 4 | basis[s[2]] >> 2);
+        *d++ = (unsigned char)(basis[s[2]] << 6 | basis[s[3]]);
 
         s += 4;
         len -= 4;
