@@ -4,12 +4,16 @@
 #include "base64.h"
 
 unsigned char *encode_test_case[] = {
+    "1",
+    "a",
     "123456789",
     "abcedfghi",
     "111111111"
 };
 
 unsigned char *decode_test_case[] = {
+    "MQ==",
+    "YQ==",
     "MTIzNDU2Nzg5",
     "YWJjZWRmZ2hp",
     "MTExMTExMTEx",
