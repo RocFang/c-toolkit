@@ -6,6 +6,12 @@
 unsigned char *encode_test_case[] = {
     "1",
     "a",
+    "12",
+    "ab",
+    "123",
+    "abc",
+    "1234",
+    "abcd",
     "123456789",
     "abcedfghi",
     "111111111"
@@ -14,6 +20,12 @@ unsigned char *encode_test_case[] = {
 unsigned char *decode_test_case[] = {
     "MQ==",
     "YQ==",
+    "MTI=",
+    "YWI=",
+    "MTIz",
+    "YWJj",
+    "MTIzNA==",
+    "YWJjZA==",
     "MTIzNDU2Nzg5",
     "YWJjZWRmZ2hp",
     "MTExMTExMTEx",
@@ -46,8 +58,10 @@ int main(int argc, char **argv)
         printf("%s\n", decode_test_case[i]);
     
         dst_len = base64_decoded_length(src_len);        
+	printf("base64_decoded_length is %d\n", dst_len);
         unsigned char *dest = (unsigned char *)malloc(dst_len + 1);
         decode_base64(dest, &dst_len, decode_test_case[i], strlen(decode_test_case[i]));
+	printf("real length is           %d\n", dst_len);
         dest[dst_len] = '\0'; 
         printf("%s\n", dest);
         printf("%s\n", "----------------------------------------------------");
