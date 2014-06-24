@@ -14,7 +14,9 @@ unsigned char *encode_test_case[] = {
     "abcd",
     "123456789",
     "abcedfghi",
-    "111111111"
+    "111111111",
+    "vhotlx.video.qq.com",
+    "vkplx.video.qq.com"
 };
 
 unsigned char *decode_test_case[] = {
@@ -29,6 +31,8 @@ unsigned char *decode_test_case[] = {
     "MTIzNDU2Nzg5",
     "YWJjZWRmZ2hp",
     "MTExMTExMTEx",
+    "dmhvdGx4LnZpZGVvLnFxLmNvbQ==",
+    "dmtwbHgudmlkZW8ucXEuY29t",
 };
 
 
